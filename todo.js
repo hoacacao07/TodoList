@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
         savedTasks.forEach(({text, completed}) => addTask(text, completed, false));
         toggleEmptyState();
-        updateProgress();
+        updateProgress(false);
     };
 
     const addTask = (text, completed = false, checkCompletion = true) => {
